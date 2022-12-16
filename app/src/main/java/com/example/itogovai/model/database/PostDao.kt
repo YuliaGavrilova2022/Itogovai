@@ -10,7 +10,7 @@ import androidx.room.Update
 @Dao
 interface PostDao {
     @Query("SELECT * FROM POST")
-    suspend fun qetPosts()
+    suspend fun qetPosts(): List<Post>
 
     @Insert
     suspend fun insertPost(post: Post)
